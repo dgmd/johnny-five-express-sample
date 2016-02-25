@@ -17,7 +17,7 @@ To do (2):
 
 1. Clone this repository _via_ [GitHub Desktop](`TK`) or from the command line (`git clone TK`).
 2. Open the cloned repository in your terminal.
-3. Within the repository, run `npm install` in your terminal.  This uses [`npm`](https://www.npmjs.com/)—Node's package manager—to install the libraries required for this project (`express` and `johnny-five`)
+3. Within the repository, run `npm install` in your terminal.  This uses [`npm`](https://www.npmjs.com/)—Node's package manager—to install the libraries required for this project (`express` and `johnny-five`) by looking within the `package.json` file.
 3. Connect your Arduino to your computer _via_ USB.
 4. In your terminal (which should still be within the cloned repository), run `node server.js`
 5. You should see `Server's up at http://localhost:3000!`; when you do, go to [http://localhost:3000](http://localhost:3000) and you should see "Hello from `server.js`!"
