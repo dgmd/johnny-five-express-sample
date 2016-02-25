@@ -1,0 +1,17 @@
+{
+  "name": "johnny-five-express-sample",
+  "version": "0.0.1",
+  "description": "A small example of using `johnny-five` to use an Arduino as a basic web server",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "johnny-five": "^0.9.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
