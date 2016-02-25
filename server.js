@@ -29,7 +29,7 @@ board.on("ready", function() { // Once the computer is connected to the Arduino
             });
         }
         else {
-            var errorMessage = "Sorry, you asked for the state of pin `" + req.params.pin + '`,' + "but I haven't been told about that pin yet.";
+            var errorMessage = "Sorry, you asked for the state of pin `" + req.params.pin + '`, ' + "but I haven't been told about that pin yet.";
             res.send(errorMessage);
         }
     });
