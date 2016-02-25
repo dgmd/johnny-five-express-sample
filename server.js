@@ -13,7 +13,7 @@ board.on("ready", function() { // Once the computer is connected to the Arduino
         res.send("Hello from `server.js`!"); // Just send some text
     });
 
-    app.get('/hello', function(req, res) { // what happens when we go to `/hello`
+    app.get('/hello', function(req, res) { // what ha1ppens when we go to `/hello`
         res.sendFile('hello.html', { root: '.' }); // Send back the file `hello.html` located in the current directory (`root`)
     });
 
@@ -23,13 +23,13 @@ board.on("ready", function() { // Once the computer is connected to the Arduino
             'analog': analogPin,
             'led': LEDpin
         };
-        if (pins.hasOwnProperty(req.params.pin)) {
-            pins[req.params.pin].query(function(state) {
-                res.send(state);
+        if (pins.hasOwnProperty(req.params.pin)) { // If our pins dictionary knows about the pin name requested
+            pins[req.params.pin].query(function(state) { // Look up the pin object associated with the pin name and query it
+                res.send(state); // sending back whatever the state we get is
             });
         }
         else {
-            var errorMessage = "Sorry, you asked for the state of pin " + req.params.pin + ',' + "but I haven't been told about that pin yet.";
+            var errorMessage = "Sorry, you asked for the state of pin `" + req.params.pin + '`,' + "but I haven't been told about that pin yet.";
             res.send(errorMessage);
         }
     });
